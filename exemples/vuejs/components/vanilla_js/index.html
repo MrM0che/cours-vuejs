@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>Component VueJS</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script type="module">
+      const { createApp, ref } = Vue;
+
+      const StandfulCounter = {
+        setup() {
+          const count = ref(0);
+          return { count };
+        },
+        template: `<div>
+                <span>{{ count }}</span>
+                <button @click="count++">Increment</button>
+            </div>`,
+      };
+
+      const app = createApp({ components: { StandfulCounter } }).mount("#app");
+    </script>
+
+    <h1>Component</h1>
+    <div id="app">
+      <standful-counter></standful-counter>
+      <standful-counter></standful-counter>
+      <standful-counter></standful-counter>
+    </div>
+  </body>
+</html>
