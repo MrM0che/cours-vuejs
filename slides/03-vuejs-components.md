@@ -40,7 +40,7 @@ A quoi ça sert ?
 ## Déclarer un composant - SFC
 
 Single File Component.  
-Uniquement avec un outil de build.
+**Uniquement avec un outil de build.**
 
 ```javascript
 <script setup>
@@ -75,9 +75,3 @@ export default {
   `
 }
 ```
-
----
-
-## Déclarer un composant - JavaScript natif (suite)
-
-Il est possible de spécifier l'id d'un élément HTML à la place du template pour utiliser cet élément comme source de template.
