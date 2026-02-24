@@ -18,7 +18,7 @@ Permet de naviguer au sein de l'application VueJS et de gérer l'historique.
 
 ---
 
-## Router initialization
+## Setup du router - Router
 
 ```javascript
 import { createMemoryHistory, createRouter } from "vue-router";
@@ -35,6 +35,16 @@ export const router = createRouter({
   history: createMemoryHistory(),
   routes,
 });
+```
+
+---
+
+## Setup du router - App
+
+```javascript
+import { router } from "./router";
+
+createApp(App).use(router).mount("#app");
 ```
 
 ---
