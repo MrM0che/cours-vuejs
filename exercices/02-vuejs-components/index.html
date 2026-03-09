@@ -11,7 +11,7 @@
 
     <script type="module">
         import pokemons from './pokemons.json' with {type: "json"}
-
+        //https://pokeapi.co/api/v2/pokemon?offset=200&limit=200
         const Card = {
             props: ['pokemon'],
             template: '<div :id="pokemon.id"><p>{{pokemon.name}}</p><img :src="pokemon.sprite" :alt="pokemon.name"></div>',
