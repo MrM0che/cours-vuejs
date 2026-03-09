@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sandbox</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <h1>Sandbox</h1>
+    <div id="app"></div>
+
+    <script type="module">
+        import pokemons from './pokemons.json' with {type: "json"}
+
+        const Card = {
+            props: ['pokemon'],
+            template: '<div :id="pokemon.id"><p>{{pokemon.name}}</p><img :src="pokemon.sprite" :alt="pokemon.name"></div>',
+
+        };
+
+        const App = {
+            components: {Card},
+            data() {
+                return {
+                    pokemons: pokemons,
+                }
+            },
+            template: '<div><Card v-for="pokemon in pokemons" :pokemon="pokemon"/></div>',
+        }
+
+
+        Vue.createApp(App).mount('#app');
+    </script>
+</body>
+</html>
